@@ -2,7 +2,7 @@
 
 A modern, browser-based SQL query tool for writing, executing, and exploring data with built-in visualization capabilities.
 
-![Quartz SQL Explorer Interface](https://ibb.co/S4kPmzcN)
+![Quartz SQL Explorer Interface](https://github.com/user-attachments/assets/50647288-ce72-44a7-b9f3-10f18f21f074)
 
 ## ✨ Features
 
