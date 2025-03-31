@@ -10,20 +10,14 @@
     "preview": "vite preview"
   },
   "dependencies": {
-    "@emotion/react": "^11.14.0",
-    "@emotion/styled": "^11.14.0",
     "@monaco-editor/react": "^4.7.0",
-    "@mui/material": "^7.0.0",
-    "@mui/x-data-grid": "^7.28.1",
     "alasql": "^4.6.4",
     "prop-types": "^15.8.1",
     "react": "^19.0.0",
     "react-csv": "^2.2.2",
     "react-dom": "^19.0.0",
     "react-icons": "^4.12.0",
-    "react-resizable": "^3.0.5",
-    "react-toastify": "^11.0.5",
-    "styled-components": "^6.1.16"
+    "react-toastify": "^11.0.5"
   },
   "devDependencies": {
     "@eslint/js": "^9.21.0",
