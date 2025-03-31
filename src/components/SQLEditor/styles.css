@@ -1,0 +1,183 @@
+.editor-container {
+  margin-bottom: 1rem;
+  border: 1px solid #e0e0e0;
+  border-radius: 4px;
+  overflow: hidden;
+}
+
+.editor-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0.5rem 1rem;
+  background-color: #f5f7fa;
+  border-bottom: 1px solid #e0e0e0;
+}
+
+.editor-label {
+  font-weight: 500;
+  font-size: 0.9rem;
+  color: #4a5568;
+}
+
+.editor-info {
+  flex-grow: 1;
+  text-align: center;
+}
+
+.editor-hint {
+  font-size: 0.8rem;
+  color: #718096;
+  font-style: italic;
+}
+
+.editor-actions {
+  display: flex;
+  gap: 0.5rem;
+}
+
+.execute-button {
+  display: flex;
+  align-items: center;
+  padding: 0.35rem 0.85rem;
+  background-color: #0066ff;
+  color: white;
+  border: none;
+  border-radius: 4px;
+  font-size: 0.9rem;
+  font-weight: 500;
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+.execute-button:hover {
+  background-color: #0052cc;
+}
+
+.button-icon {
+  margin-right: 0.35rem;
+}
+
+/* Adjust the editor's gutter (line numbers) */
+.monaco-editor .margin {
+  background-color: #f5f7fa;
+}
+
+/* Style the main editor area */
+.monaco-editor .monaco-scrollable-element {
+  background-color: #ffffff;
+}
+
+/* Ensure the editor takes up the full container height */
+.editor-container .monaco-editor {
+  height: 100% !important;
+}
+
+/* Handle iPad keyboard and iOS focus issues */
+.code-editor-no-ipad-keyboard {
+  outline: none;
+  -webkit-tap-highlight-color: transparent;
+}
+
+/* Support mobile scroll */
+.monaco-scrollable-element {
+  -webkit-overflow-scrolling: touch;
+}
+
+@media screen and (max-width: 768px) {
+  .editor-header {
+    flex-wrap: wrap;
+    padding: 0.5rem;
+  }
+  
+  .editor-info {
+    order: 3;
+    width: 100%;
+    margin-top: 0.5rem;
+    text-align: left;
+  }
+
+  .editor-label {
+    flex: 1;
+  }
+}
+
+.editor-footer {
+  padding: 0.5rem 1rem;
+  background-color: #f9f9f9;
+  border-top: 1px solid #e0e0e0;
+  display: flex;
+  justify-content: flex-start;
+}
+
+.save-button {
+  padding: 8px 12px;
+  background-color: #f5f7fa;
+  color: #2c3e50;
+  border: 1px solid #cbd5e0;
+  border-radius: 4px;
+  font-size: 14px;
+  cursor: pointer;
+  transition: all 0.2s;
+  display: inline-flex;
+  align-items: center;
+  font-weight: 500;
+}
+
+.save-button:hover {
+  background-color: #edf2f7;
+  border-color: #b2cae5;
+}
+
+.save-button:active {
+  background-color: #e2e8f0;
+  border-color: #a0aec0;
+}
+
+/* Hide iPad keyboard button - more specific selectors */
+.editor-container [id*="textarea.iPadShowKeyboard"],
+.editor-container [class*="iPadShowKeyboard"],
+.editor-container .textarea\.iPadShowKeyboard,
+textarea.iPadShowKeyboard,
+div[id*="iPadShowKeyboard"],
+div[class*="iPadShowKeyboard"],
+[aria-label*="keyboard"],
+[id*="keyboard"],
+[role*="button"][aria-label*="keyboard"] {
+  display: none !important;
+  visibility: hidden !important;
+  opacity: 0 !important;
+  pointer-events: none !important;
+  height: 0 !important;
+  width: 0 !important;
+  position: absolute !important;
+  z-index: -9999 !important;
+}
+
+/* Add custom class to editor container */
+.code-editor-no-ipad-keyboard .iPadShowKeyboard,
+.code-editor-no-ipad-keyboard + .iPadShowKeyboard {
+  display: none !important;
+}
+
+/* Responsive styles for SQLEditor */
+@media screen and (max-width: 480px) {
+  .editor-header {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .editor-label {
+    margin-bottom: 0.5rem;
+  }
+
+  .editor-actions {
+    width: 100%;
+  }
+
+  .execute-button {
+    width: 100%;
+    justify-content: center;
+    padding: 0.5rem;
+  }
+}
